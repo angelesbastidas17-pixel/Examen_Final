@@ -1,9 +1,14 @@
 package modelo;
 
-public class TableroJugable {
+public interface TableroJugable {
 
-	public TableroJugable() {
-		// TODO Auto-generated constructor stub
-	}
+    boolean descubrirCasilla(int fila, int col) throws CasillaDescubierta, JuegoException;
 
+    void marcarCasilla(int fila, int col) throws JuegoException;
+
+    boolean esVictoria();
+
+    int getTamano();
+
+    Casilla getCasilla(int fila, int col);
 }

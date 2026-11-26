@@ -1,9 +1,14 @@
 package modelo;
 
-public class JuegoException {
+public class JuegoException extends BuscaminasException {
 
-	public JuegoException() {
-		// TODO Auto-generated constructor stub
-	}
+    private static final long serialVersionUID = 1L;
 
+    public JuegoException(String mensaje) {
+        super(mensaje);
+    }
+
+    public JuegoException(String mensaje, Throwable causa) {
+        super(mensaje, causa);
+    }
 }

@@ -1,9 +1,18 @@
 package modelo;
 
-public class CasillaDescubierta {
+public class CasillaDescubierta extends BuscaminasException {
 
-	public CasillaDescubierta() {
-		// TODO Auto-generated constructor stub
-	}
+    private static final long serialVersionUID = 1L;
 
+    public CasillaDescubierta() {
+        super("La casilla ya se encuentra descubierta.");
+    }
+
+    public CasillaDescubierta(String mensaje) {
+        super(mensaje);
+    }
+
+    public CasillaDescubierta(String mensaje, Throwable causa) {
+        super(mensaje, causa);
+    }
 }

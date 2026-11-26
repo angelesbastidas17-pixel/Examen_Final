@@ -1,9 +1,22 @@
 package modelo;
 
-class BuscaminasException {
+public abstract class BuscaminasException extends Exception {
 
-	public BuscaminasException() {
-		// TODO Auto-generated constructor stub
-	}
+    private static final long serialVersionUID = 1L;
 
+    public BuscaminasException() {
+        super("Error en el juego Buscaminas.");
+    }
+
+    public BuscaminasException(String mensaje) {
+        super(mensaje);
+    }
+
+    public BuscaminasException(String mensaje, Throwable causa) {
+        super(mensaje, causa);
+    }
+
+    public BuscaminasException(Throwable causa) {
+        super(causa);
+    }
 }

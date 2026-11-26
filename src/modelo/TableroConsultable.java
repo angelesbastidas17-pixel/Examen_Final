@@ -1,9 +1,8 @@
 package modelo;
 
-public class TableroConsultable {
+public interface TableroConsultable {
 
-	public TableroConsultable() {
-		// TODO Auto-generated constructor stub
-	}
+    int getTamano();
 
+    Casilla getCasilla(int fila, int columna);
 }
