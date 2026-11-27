@@ -1,20 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package vista;
 
-/**
- *
- * @author user
- */
+import java.util.Scanner;
+import controlador.ControladorBuscaminas;
+import controlador.GestorPersistencia;
+
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        VistaJuego vista = new VistaJuego();
+        GestorPersistencia gestorPersistencia = new GestorPersistencia();
+
+        try (Scanner scanner = new Scanner(System.in)) {
+            ControladorBuscaminas controlador =
+                    new ControladorBuscaminas(vista, scanner, gestorPersistencia);
+            controlador.ejecutarMenu();
+        }
     }
-    
 }
+
